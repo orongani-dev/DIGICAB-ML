@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&family=Playfair+Display:ital,wght@0,700;1,700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "DM Sans", "Inter", "Helvetica Neue", Arial, sans-serif;
+  --font-serif: "Playfair Display", "Georgia", serif;
+  
+  --color-navy: #0F172A;
+  --color-navy-light: #1E293B;
+  --color-gold: #D4AF37;
+  --color-gold-light: #F5E6BE;
+  --color-accent: #FBCC14;
+  --color-bg: #F1F5F9;
+  --color-surface: #FFFFFF;
+  --color-text-main: #334155;
+  --color-text-muted: #64748B;
+  --color-border-theme: #E2E8F0;
+}
+
+@layer base {
+  body {
+    @apply bg-bg text-text-main font-sans text-[0.9rem];
+  }
+  
+  h1, h2, h3 {
+    @apply font-serif text-navy;
+  }
+}
+
+.glass {
+  @apply bg-surface/80 backdrop-blur-md border border-white/20;
+}
+
+.navy-gradient {
+  background: linear-gradient(135deg, #0F172A 0%, #1E293B 100%);
+}
+
+.table-header {
+  @apply bg-bg font-semibold text-text-muted border-b-2 border-border-theme px-4 py-3 text-left uppercase tracking-wider text-[0.75rem];
+}
+
+.table-cell {
+  @apply px-4 py-3 border-b border-border-theme text-[0.85rem];
+}
+
+.badge {
+  @apply px-2 py-0.5 rounded text-[0.7rem] font-semibold uppercase;
+}
+
+/* Custom Scrollbars - Standard and Visible */
+::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+  border-radius: 0;
+  border: 1px solid #e2e8f0;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #0F172A; /* High contrast navy */
+  border-radius: 6px;
+  border: 3px solid #f1f5f9;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #D4AF37; /* Gold on hover */
+}
+
+.custom-scrollbar {
+  scrollbar-width: auto;
+  scrollbar-color: #0F172A #f1f5f9;
+  overflow: auto !important;
+}

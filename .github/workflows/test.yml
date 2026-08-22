@@ -1,4 +1,4 @@
-nom: Run Tests
+name: Run Tests
 
 on: [push, pull_request]
 

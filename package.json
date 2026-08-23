@@ -9,7 +9,7 @@
     "preview": "vite preview",
     "start": "tsx server.ts",
     "clean": "rm -rf dist",
-    "lint": "tsc --noEmit"
+    "lint": "tsc --noEmit",
     "test": "echo \"No test specified\" && exit 0"
   },
   "dependencies": {

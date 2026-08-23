@@ -10,6 +10,7 @@
     "start": "tsx server.ts",
     "clean": "rm -rf dist",
     "lint": "tsc --noEmit"
+    "test": "echo \"No test specified\" && exit 0"
   },
   "dependencies": {
     "@google/genai": "^1.29.0",
